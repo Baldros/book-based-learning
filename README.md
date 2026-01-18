@@ -20,6 +20,3 @@ Cada pasta possui seu próprio arquivo `README.md` dedicado, onde você encontra
 1. **Prática**: Aplicar os conceitos teóricos apresentados nos livros através de código.
 2. **Histórico**: Manter um registro detalhado da jornada de aprendizado.
 3. **Consulta**: Servir como uma base de conhecimento pessoal para referências futuras.
-
----
-*Este arquivo é mantido de forma genérica para refletir a natureza dinâmica e em constante crescimento deste repositório de estudos.*
