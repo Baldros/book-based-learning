@@ -1,16 +1,27 @@
 # Introdução à Visão Computacional 👁️🖼️
 
-Estudos focados no processamento e análise de imagens digitais, baseados em literatura de **Visão Computacional**.
+> **"Teaching Machines to See the World"**
 
-## 📖 Sobre o Tema
-A Visão Computacional é o campo da Inteligência Artificial que permite que computadores entendam e interpretem informações visuais (fotos, vídeos) da mesma forma que os humanos.
+Este diretório explora os fundamentos e as técnicas de ponta que permitem aos computadores processar, analisar e "compreender" imagens e vídeos.
 
-## 🧠 Tópicos Abordados
-- Processamento de Imagem (Filtros, Transformações).
-- Detecção de Bordas e Características.
-- Segmentação de Imagem.
-- Reconhecimento de Padrões Visuais.
+## 🌌 O Universo da Visão Computacional
+Diferente do processamento de imagens tradicional, a Visão Computacional busca a extração automática de informações de alto nível. É a tecnologia por trás de carros autônomos, diagnósticos médicos por imagem e reconhecimento facial.
 
-## 📁 Conteúdo do Pasta
-- Implementações de técnicas de processamento de imagem utilizando Python e bibliotecas como OpenCV.
-- Notebooks com exemplos práticos de visão artificial.
+### 🎯 Objetivos de Estudo
+- **Percepção Visual**: Entender como a luz e a cor são capturadas e transformadas em dados binários.
+- **Extração de Características**: Identificar padrões como bordas, texturas e formas geométricas.
+- **Processamento Espacial**: Aplicar transformações que realçam ou isolam objetos de interesse.
+
+### 💪 Pontos Fortes desta Jornada
+- **Fundamentos Matemáticos**: Uso intensivo de matrizes e álgebra linear para manipulação de pixels.
+- **Ferramentas Líderes**: Prática com bibliotecas como OpenCV, a biblioteca mais utilizada na indústria de visão.
+- **Do Básico ao Avançado**: Partindo de filtros simples até a preparação para reconhecimento de objetos.
+
+## 🧠 Tópicos de Estudo
+- **Filtros e Convoluções**: O "coração" do processamento de imagem.
+- **Diferenciação Espacial**: Métodos como Canny e Sobel para detecção de bordas.
+- **Transformações Geométricas**: Redimensionamento, rotação e correção de perspectiva.
+
+## 📁 Atividades no Diretório
+- Notebooks práticos com processamento de imagem real.
+- Experimentação com algoritmos de visão clássica e moderna.
