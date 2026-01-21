@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import io
 
-def get_image(url, titulo=None, tamanho_figura=None):
+def get_image(url, title=None, fig_dize=None):
     """
     Baixa e exibe uma imagem a partir de uma URL.
     
@@ -27,14 +27,14 @@ def get_image(url, titulo=None, tamanho_figura=None):
         
         img = mpimg.imread(io.BytesIO(image_data), format='png')
         
-        if tamanho_figura:
-            plt.figure(figsize=tamanho_figura)
+        if fig_dize:
+            plt.figure(figsize=fig_dize)
         
         plt.imshow(img)
         plt.axis('off')
         
-        if titulo:
-            plt.title(titulo)
+        if title:
+            plt.title(title)
         
         plt.show()
         
