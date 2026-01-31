@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import io
 
-def get_image(url, title=None, fig_dize=None):
+def get_image(url, title=None, fig_size=None):
     """
     Baixa e exibe uma imagem a partir de uma URL.
     
@@ -27,8 +27,8 @@ def get_image(url, title=None, fig_dize=None):
         
         img = mpimg.imread(io.BytesIO(image_data), format='png')
         
-        if fig_dize:
-            plt.figure(figsize=fig_dize)
+        if fig_size:
+            plt.figure(figsize=fig_size)
         
         plt.imshow(img)
         plt.axis('off')
