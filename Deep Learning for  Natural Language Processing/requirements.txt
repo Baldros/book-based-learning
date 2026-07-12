@@ -1,0 +1,7 @@
+beautifulsoup4
+keras
+nltk
+pandas
+requests
+scikit-learn
+ipykernel
