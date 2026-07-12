@@ -1,0 +1,5 @@
+# files/folders ignorando
+.*
+.*/
+__pycache__/
+!.gitignore
