@@ -1,0 +1,18 @@
+# Core environment for the current study notebooks.
+# Recommended Python version: 3.11-3.14.
+#
+# PyTorch is intentionally installed separately because its wheel must match
+# the desired compute platform. See the CUDA setup in README.md.
+
+# Notebook environment
+jupyterlab>=4.4,<5
+ipykernel>=6.29,<8
+
+# Numerical computing and visualizations
+matplotlib>=3.10,<4
+
+# Transformer models
+transformers>=5.0,<6
+
+# Required by `device_map="auto"` and low-memory model loading
+accelerate>=1.0,<2

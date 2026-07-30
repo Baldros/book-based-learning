@@ -164,7 +164,8 @@ then install the notebook's current direct dependencies:
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install jupyter matplotlib torch transformers
+python -m pip install torch==2.13.0 --index-url https://download.pytorch.org/whl/cu130
+python -m pip install -r ".\Transformers - The Definitive Guide\requirements.txt"
 python -m jupyter lab
 ```
 
@@ -182,10 +183,23 @@ Notes:
   resolved correctly.
 - Hugging Face examples download pretrained model files and therefore require an
   internet connection and sufficient disk space.
-- Some examples inspect NVIDIA GPU support with `nvidia-smi`; a compatible GPU is
-  useful for larger workloads but not required for every introductory cell.
-- Install the PyTorch build appropriate for your CPU/GPU platform by following
-  the [official PyTorch installation selector](https://pytorch.org/get-started/locally/).
+- This machine has an NVIDIA GeForce RTX 3060 (12 GB) and a driver compatible
+  with CUDA 13.3. The setup above therefore uses the official PyTorch 2.13
+  `cu130` wheel, which is compatible with the installed driver.
+- The PyTorch wheel bundles the CUDA runtime needed by PyTorch. Installing the
+  full CUDA Toolkit separately is not required unless you plan to compile CUDA
+  extensions or build PyTorch from source.
+- `torch` is intentionally excluded from `requirements.txt` so a later generic
+  dependency installation cannot replace the CUDA build with a CPU-only or
+  otherwise unsuitable wheel. For another machine, use the
+  [official PyTorch installation selector](https://pytorch.org/get-started/locally/).
+- Verify GPU acceleration after installation:
+
+  ```powershell
+  python -c "import torch; print('PyTorch:', torch.__version__); print('CUDA runtime:', torch.version.cuda); print('CUDA available:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'not detected')"
+  ```
+
+  `CUDA available` should be `True`, and the reported GPU should be the RTX 3060.
 - The book's official notebooks may have their own per-chapter requirements and
   stronger GPU needs. Follow the instructions in the official GitHub repository
   when running those notebooks.
