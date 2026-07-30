@@ -5,14 +5,13 @@
 # the desired compute platform. See the CUDA setup in README.md.
 
 # Notebook environment
-jupyterlab>=4.4,<5
-ipykernel>=6.29,<8
+ipykernel
 
 # Numerical computing and visualizations
-matplotlib>=3.10,<4
+matplotlib
 
 # Transformer models
-transformers>=5.0,<6
+transformers
 
 # Required by `device_map="auto"` and low-memory model loading
-accelerate>=1.0,<2
+accelerate
